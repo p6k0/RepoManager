@@ -40,6 +40,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.FileSizeLbl = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +57,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(12, 32);
+            this.label2.Location = new System.Drawing.Point(12, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 23);
             this.label2.TabIndex = 1;
@@ -64,7 +66,7 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(12, 55);
+            this.label3.Location = new System.Drawing.Point(12, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 23);
             this.label3.TabIndex = 2;
@@ -73,7 +75,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(12, 78);
+            this.label4.Location = new System.Drawing.Point(12, 100);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 23);
             this.label4.TabIndex = 3;
@@ -102,21 +104,21 @@
             // 
             // RepoNameTbx
             // 
-            this.RepoNameTbx.Location = new System.Drawing.Point(123, 35);
+            this.RepoNameTbx.Location = new System.Drawing.Point(123, 57);
             this.RepoNameTbx.Name = "RepoNameTbx";
             this.RepoNameTbx.Size = new System.Drawing.Size(167, 20);
             this.RepoNameTbx.TabIndex = 6;
             // 
             // RepoVerTbx
             // 
-            this.RepoVerTbx.Location = new System.Drawing.Point(123, 57);
+            this.RepoVerTbx.Location = new System.Drawing.Point(123, 79);
             this.RepoVerTbx.Name = "RepoVerTbx";
             this.RepoVerTbx.Size = new System.Drawing.Size(167, 20);
             this.RepoVerTbx.TabIndex = 7;
             // 
             // RepoDescrTbx
             // 
-            this.RepoDescrTbx.Location = new System.Drawing.Point(123, 80);
+            this.RepoDescrTbx.Location = new System.Drawing.Point(123, 102);
             this.RepoDescrTbx.Multiline = true;
             this.RepoDescrTbx.Name = "RepoDescrTbx";
             this.RepoDescrTbx.Size = new System.Drawing.Size(167, 55);
@@ -125,7 +127,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Location = new System.Drawing.Point(55, 104);
+            this.groupBox1.Location = new System.Drawing.Point(55, 126);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox1.Size = new System.Drawing.Size(62, 55);
@@ -146,18 +148,40 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(215, 141);
+            this.button2.Location = new System.Drawing.Point(215, 163);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 10;
             this.button2.Text = "Добавить";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // FileSizeLbl
+            // 
+            this.FileSizeLbl.AutoEllipsis = true;
+            this.FileSizeLbl.Location = new System.Drawing.Point(123, 32);
+            this.FileSizeLbl.Name = "FileSizeLbl";
+            this.FileSizeLbl.Size = new System.Drawing.Size(132, 23);
+            this.FileSizeLbl.TabIndex = 12;
+            this.FileSizeLbl.Text = "label5";
+            this.FileSizeLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(12, 32);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(105, 23);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Размер:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 175);
+            this.ClientSize = new System.Drawing.Size(300, 205);
+            this.Controls.Add(this.FileSizeLbl);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.RepoDescrTbx);
@@ -193,6 +217,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label FileSizeLbl;
+        private System.Windows.Forms.Label label6;
     }
 }
 
