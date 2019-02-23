@@ -99,7 +99,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(347, 11);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(40, 28);
             this.button1.TabIndex = 5;
@@ -110,7 +110,7 @@
             // RepoNameTbx
             // 
             this.RepoNameTbx.Location = new System.Drawing.Point(164, 70);
-            this.RepoNameTbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RepoNameTbx.Margin = new System.Windows.Forms.Padding(4);
             this.RepoNameTbx.Name = "RepoNameTbx";
             this.RepoNameTbx.Size = new System.Drawing.Size(221, 22);
             this.RepoNameTbx.TabIndex = 6;
@@ -118,7 +118,7 @@
             // RepoVerTbx
             // 
             this.RepoVerTbx.Location = new System.Drawing.Point(164, 97);
-            this.RepoVerTbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RepoVerTbx.Margin = new System.Windows.Forms.Padding(4);
             this.RepoVerTbx.Name = "RepoVerTbx";
             this.RepoVerTbx.Size = new System.Drawing.Size(221, 22);
             this.RepoVerTbx.TabIndex = 7;
@@ -126,7 +126,7 @@
             // RepoDescrTbx
             // 
             this.RepoDescrTbx.Location = new System.Drawing.Point(164, 126);
-            this.RepoDescrTbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RepoDescrTbx.Margin = new System.Windows.Forms.Padding(4);
             this.RepoDescrTbx.Multiline = true;
             this.RepoDescrTbx.Name = "RepoDescrTbx";
             this.RepoDescrTbx.Size = new System.Drawing.Size(221, 67);
@@ -136,9 +136,9 @@
             // 
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Location = new System.Drawing.Point(73, 155);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox1.Size = new System.Drawing.Size(83, 68);
             this.groupBox1.TabIndex = 9;
@@ -150,7 +150,7 @@
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Location = new System.Drawing.Point(17, 20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(45, 42);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -161,7 +161,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(287, 201);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 10;
@@ -208,9 +208,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Параметры репозитория";
+            this.TopMost = true;
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

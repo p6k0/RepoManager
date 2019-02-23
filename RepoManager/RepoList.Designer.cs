@@ -42,9 +42,12 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(301, 388);
             this.listBox1.TabIndex = 0;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
             // 
             // button1
             // 
+            this.button1.Enabled = false;
             this.button1.Location = new System.Drawing.Point(13, 415);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
@@ -65,7 +68,8 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(121, 415);
+            this.button3.Enabled = false;
+            this.button3.Location = new System.Drawing.Point(94, 415);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(89, 23);
             this.button3.TabIndex = 3;
@@ -85,6 +89,7 @@
             this.Controls.Add(this.listBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "RepoList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Репозитории";
             this.TopMost = true;
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.RepoList_DragDrop);

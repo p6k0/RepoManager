@@ -103,5 +103,20 @@ namespace RepoManager
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop)) e.Effect = DragDropEffects.Copy;
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+           if(listBox1.SelectedIndex != -1)
+            {
+                button1.Enabled = true;
+                button3.Enabled = true;
+            }
+        }
+
+        private void listBox1_DoubleClick(object sender, System.EventArgs e)
+        {
+            if (listBox1.SelectedIndex != -1)
+                button3_Click(null, null);
+        }
     }
 }
