@@ -9,6 +9,9 @@ namespace RepoManager
 {
     static class Program
     {
+        public const string
+            FilesPath = @"C:\web\data\repos\",
+            IconsPath = @"C:\web\webui\repos\icons\";
         public static MySqlConnection conn;
         /// <summary>
         /// Главная точка входа для приложения.
@@ -20,7 +23,7 @@ namespace RepoManager
             conn.Open();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new RepoList());
         }
     }
 }
