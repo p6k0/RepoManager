@@ -22,16 +22,15 @@ namespace RepoManager
                 using (MySqlCommand cmd = Program.conn.CreateCommand())
                 {
                     cmd.CommandType = System.Data.CommandType.Text;
-                    cmd.CommandText = "SELECT  `Name`, `Description`, `FileName`, `Size`, `Version` FROM `data` WHERE Id=" + RepoId;
+                    cmd.CommandText = "SELECT  `Name`, `FileName`, `Size`, `Version` FROM `data` WHERE Id=" + RepoId;
                     MySqlDataReader r = cmd.ExecuteReader();
                     if (r.HasRows)
                     {
                         r.Read();
                         RepoNameTbx.Text = r.GetString(0);
-                        RepoDescrTbx.Text = r.GetString(1);
-                        FileNameLbl.Text = r.GetString(2);
-                        FileSizeLbl.Text = r.GetInt32(3).ToString();
-                        RepoVerTbx.Text = r.GetString(4);
+                        FileNameLbl.Text = r.GetString(1);
+                        FileSizeLbl.Text = r.GetInt32(2).ToString();
+                        RepoVerTbx.Text = r.GetString(3);
                         using (MemoryStream ms = new MemoryStream(File.ReadAllBytes(Program.IconsPath + RepoId + ".png")))
                             pictureBox1.Image = Image.FromStream(ms);
                     }
@@ -72,12 +71,11 @@ namespace RepoManager
             {
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.CommandText = RepoId == -1 ?
-                    "INSERT INTO `data`(`Name`, `FileName`, `Description`, `Size`, `Version`) VALUES (@Name,@FileName,@Description,@Size,@Version);" :
-                    "UPDATE `data` SET `Name`=@Name,`FileName`=@FileName,`Description`=@Description,`Size`=@Size,`Version`=@Version,`Added`=NOW() WHERE `Id`=@Id";
+                    "INSERT INTO `data`(`Name`,FileName, `Size`, `Version`) VALUES (@Name,@FileName,@Size,@Version);" :
+                    "UPDATE `data` SET `Name`=@Name,`FileName`=@FileName,`Size`=@Size,`Version`=@Version,`Added`=NOW() WHERE `Id`=@Id";
 
                 cmd.Parameters.Add(new MySqlParameter("@Name", MySqlDbType.Text) { Value = RepoNameTbx.Text });
                 cmd.Parameters.Add(new MySqlParameter("@FileName", MySqlDbType.Text) { Value = FileNameLbl.Text });
-                cmd.Parameters.Add(new MySqlParameter("@Description", MySqlDbType.Text) { Value = RepoDescrTbx.Text });
                 cmd.Parameters.Add(new MySqlParameter("@Size", MySqlDbType.Int32) { Value = Convert.ToInt32(FileSizeLbl.Text) });
                 cmd.Parameters.Add(new MySqlParameter("@Version", MySqlDbType.Text) { Value = RepoVerTbx.Text });
                 cmd.Parameters.Add(new MySqlParameter("@Id", MySqlDbType.Int32) { Value = RepoId });
